@@ -1,0 +1,315 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;
+}
+body{ line-height: 1.5;
+color: #ff4500;
+font-size: 1.6rem; /* 16px */
+font-family: "Helvetica Neue",
+Arial,
+"Hiragino Kaku Gothic ProN",
+"Hiragino Sans",
+Meiryo,
+sans-serif;
+text-align: center;
+background-image:url(../img/ocean.jpg);
+background-size: cover;
+}
+header,main,footer,h1,h2,h3,p,div, .container01, .container02,
+.container02 .table01, .filler01{
+    margin: 0.5em 0em 0em 0em;
+    padding: 0.1em;
+}
+
+  th, td{
+      line-height: 1.2em;
+      padding: 0.1em;
+
+  }  
+
+
+h1{
+    color:rgb(181,242,252);
+    background-color: burlywood;
+}
+h2{
+    color:mediumseagreen;
+}
+h3{
+    border-left: solid 0.5em darkgray;
+    text-align:left;
+}
+.container01, .container02, .container03 {
+    border-radius: 0.5em 1.5em;
+    background-color: whitesmoke;
+}
+.table3{
+    width: 80%;
+    margin: 1em auto 0em;
+    border-collapse: collapse;/* セルのボーダー 重ねて（かさねて）表示（ひょうじ） */
+    table-layout: auto;
+}
+.table3 th{ /*thタグに対して*/
+    padding-left: 1em;
+    padding-right: 1em;
+    color: rgb(196, 255, 255);
+    background:orchid;/* 背景色（はいけいしょく） */
+}
+.table3 td {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    color: gray;
+    background: #fff5e5;/* 背景色（はいけいしょく） */
+}
+.table3 th, .table3 td {
+    border: solid 0.2em rgb(255, 255, 255);/* 線（せん）の太さ（ふとさ）、色（いろ）*/
+}
+.shutter{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 9999;
+    margin: 0em;
+    padding: 0em;
+    background-color: #1e1e1e;
+    animation: byeShutter 2.6s forwards;
+}
+.shutter::before{
+    content:'';
+    position: absolute;  
+    top: 0;
+    left: 0;
+    bottom: 0;
+width: 0;
+margin: auto;
+background-color: #fff;
+animation: shutterOpen 2.6s forwards;
+}
+@keyframes byeShutter{
+70%{
+    opacity: 1;
+}
+100%{
+    opacity: 0;
+    display: none;
+    z-index:-1 ;
+}
+}
+@keyframes shutterOpen{
+    0%{
+      width: 0;  
+      height: 0.05em;
+    }
+    50% {
+    width: 100%;
+    height: 0.05em;
+}
+90% {
+    width:100%;
+    height:100%; 
+}
+100% {
+  width:100%;
+  height: 100%; }
+}
+/*****************************/
+/* class="cat-container02"   */
+/*****************************/
+/* Touch Cat! partⅡ */
+.cat-container02{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.cat-block02{
+    position: relative;
+    width: 16em;
+    height: 22em;
+    margin-left:2em;
+    margin-right: 2em;
+}
+.cat-block02 p {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+/*----- 画像をマスクして文字拡大 -----*/
+.cat-item02_1{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 16em;
+    height: 16em;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none; 
+}
+.cat-item02_1 img{
+    width: 16em;
+    height: 16em;
+    object-fit: cover;
+}
+.cat-item02_1 .caption {
+    padding-top: 7em;
+    font-size: 1em;
+    text-align: center;
+	color:	white;
+}
+
+.cat-item02_1  .mask {
+	position: absolute;	/* 絶対位置指定 */
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.7);	/* マスクは半透明 */
+	transition: all 0.5s ease-out;
+    opacity: 0; /* マスクを表示しない */
+}
+.cat-item02_1:hover  .mask {
+    transform: scale(4);   /* 4倍に拡大 */
+	opacity: 1; /* マスクを表示する */
+}
+
+/*----- 上からスライドして画像をマスク -----*/
+.cat-item02_2{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 16em;
+    height: 16em;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none; 
+}
+.cat-item02_2 img{
+    width: 16em;
+    height: 16em;
+    object-fit: cover;
+}
+.cat-item02_2 .caption {
+    padding-top: 7em;
+    font-size: 1em;
+    text-align: center;
+	color:	white;
+}
+.cat-item02_2  .mask {
+	position: absolute;	/* 絶対位置指定 */
+	width: 100%;
+	height: 100%;
+	top: -110%;	/* 枠の上に置いて表示させない */
+    left: 0;
+    margin: 0;
+	background-color: rgba(0,0,0,0.7);	/* マスクは半透明 */
+	transition: all 1s ease;
+}
+.cat-item02_2:hover .mask {
+	top: 0;	/* 下に降りてくるように見せる */
+}
+
+
+/*----- 横に１８０度回転して画像をマスク -----*/
+.cat-item02_3{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 16em;
+    height: 16em;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none; 
+}
+.cat-item02_3 img{
+    width: 16em;
+    height: 16em;
+    object-fit: cover;
+}
+.cat-item02_3 .caption {
+    padding-top: 7em;
+    font-size: 1em;
+    text-align: center;
+	color:	white;
+}
+.cat-item02_3  .mask {
+	position: absolute;	/* 絶対位置指定 */
+    width: 100%;
+	height: 100%;
+	top: 0;	/* 枠の上に置いて表示させない */
+    left: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.7);	/* マスクは半透明 */
+    transform:	rotateY(-180deg);
+	transition: all 3s ease;
+    opacity: 0; /* 表示させない */
+}
+.cat-item02_3:hover .mask {
+	transform: rotateY(0deg) scale(3);
+    opacity: 1; /* ホバーで表示する */
+}
+/* Twitter */
+.font01{
+    color: rgb(30, 50, 242);
+    font-size: 3em;
+}
+.font01:hover {/*ホバー時*/
+    color: #8866d8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* Facebook */
+.font02{
+    color: rgb(59, 100, 100);
+    font-size: 3em;
+}
+.font02:hover {/*ホバー時*/
+    color: #8866d8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* Instagram */
+.font03{
+    color: rgb(134, 10, 118);
+    font-size: 3em;
+}
+.font03:hover {/*ホバー時*/
+    color: #8866d8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* YouTube */
+.font04{
+    color: rgb(219, 25, 25);
+    font-size: 3em;
+}
+.font04:hover {/*ホバー時*/
+    color: #8866d8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* footer left */
+.font05{
+    color: yellow;
+}
+/* footer right */
+.font06{
+    color: yellow;
+}
+
+
+/*****************************/
+/* フッター                   */
+/*****************************/
+footer {
+    color: whitesmoke;
+    text-align: center;
+    background-color: #46aef7;
+}
+/*national-flag size control */
+.flag img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}

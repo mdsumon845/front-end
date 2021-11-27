@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+html {
+    /* ブラウザのデフォルトが16px */
+    /* デフォルトの16pxの代わりに1emが10pxになるように調整（ちょうせい） */
+    font-size: 65%;
+  }
+  
+body{
+    line-height: 1.5;
+    color: rgb(73, 72, 72);
+    font-size: 1.6rem; /* 16px */
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    text-align: center;
+    background-color:lightgrey;
+}
+
+header, main, footer, h1, h2, h3, p, div, .container01, .filler01 {
+    margin: 0.5em 0em 0em 0em;
+    padding: 0.1em;
+}
+
+/*****************************/
+/* 見出し（みだし）           */
+/*****************************/
+h1 {
+    color: rgb(181, 242, 252);
+    background-color:  #46aef7;
+}
+
+h2 {
+    padding-left: 0.5em;
+    border-left: solid 0.5em darkgray;
+    text-align: left;
+}
+
+/*****************************/
+/* セクション                 */
+/*****************************/
+.container01 {
+    border-radius: 0.5em 1.5em;
+    background-color: whitesmoke;
+}
+
+/*****************************/
+/* Font Awesome              */
+/* Twitter,Facebookなどの     */
+/* アイコン用フォント          */
+/*****************************/
+/* link */
+.font00{
+    color: rgb(29, 161, 242);
+    font-size: 3em;
+}
+
+/* Twitter */
+.font01{
+    color: rgb(29, 161, 242);
+    font-size: 3em;
+}
+.font01:hover {/*ホバー時*/
+    color: #668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* Facebook */
+.font02{
+    color: rgb(59, 89, 152);
+    font-size: 3em;
+}
+.font02:hover {/*ホバー時*/
+    color: #668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* Instagram */
+.font03{
+    color: rgb(59, 89, 152);
+    font-size: 3em;
+}
+.font03:hover {/*ホバー時*/
+    color: #668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* YouTube */
+.font04{
+    color: rgb(59, 89, 152);
+    font-size: 3em;
+}
+.font04:hover {/*ホバー時*/
+    color: #668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+/* footer left */
+.font05{
+    color: yellow;
+}
+/* footer right */
+.font06{
+    color: yellow;
+}
+
+
+/*****************************/
+/* フッター                   */
+/*****************************/
+footer {
+    color: whitesmoke;
+    text-align: center;
+    background-color: #46aef7;
+}
+/*****************************/
+/* 文字スペース               */
+/*****************************/
+.mgn-01{
+    margin-left: 1em;
+    margin-right: 1em;
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+.f-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0px;
+    padding: 0.1em;
+    color: white;
+    background: rgba(76, 241, 76, 0.753);
+}
+.f-item {
+    margin: 0px;
+}
+@media screen and (max-width: 480px){
+    h1,h2{
+  font-size: 100%      
+    }
+    .f-container{
+        flex-flow: column;
+    }
+    .f-item{
+        font-size: 80%;
+        border-bottom: 0.1em solid rgba(49,49,49,0,5);
+    }
+    .f-item a{
+        height: 10px;
+    }
+}
+.f-item a{
+    display: block;
+    padding: 0.8em 1.0em;
+    color: whitesmoke;
+    text-decoration: none;
+border: redius 0.5em;
+}
+.f-item a:hover{
+    background: cyan;
+    color: #990033;
+}
+
+.f-item a:active{
+    background: cyan;
+    color: #990033
+}

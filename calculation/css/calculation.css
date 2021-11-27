@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #EEEEEE;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+    color: rgb(26, 212, 212);
+    text-align: center;
+}
+form {
+  zoom: 2;
+  text-align: center;
+}
+
+input[type=number] {
+  width: 30px;
+
+}
+
+#result {
+  width: 30px;
+  display: inline-block
+}
+/*******************************************************/
+/* class=back                                         */
+/* id=btn99 backボタン                                 */
+/*******************************************************/
+.back{
+    text-align: left;
+  }
+  #btn99{
+    padding: 0.5em;
+    border-radius: 0.3em;
+    color: whitesmoke;
+    font-size: 1.5em;
+    background: rgb(124, 128, 73);
+    cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
+  }

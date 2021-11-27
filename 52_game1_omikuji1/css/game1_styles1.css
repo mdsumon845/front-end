@@ -1,0 +1,66 @@
+/* ヘッダー */
+header {
+  margin-top: 8px;
+  color: rgb(255, 187, 244);
+  font-size: 38px;
+  text-align: center;
+  background-color: rgb(153, 153, 151);
+}
+
+/* フッター */
+footer {
+  margin-top: 8px;
+  color: rgb(0, 151, 251);
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(212, 212, 212);
+}
+
+/* class="omikuji" */
+.omikuji {
+  margin-top: 8px;
+}
+
+/* id=btn1 おみくじボタン１ */
+#btn1{
+  margin: 20px auto;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  border-radius: 50%;
+  color: rgb(255, 0, 212);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  background: aqua;
+  box-shadow: 0 10px 0 #3ed1c5;
+}
+
+#btn1:hover {
+  color: aqua;
+  background: rgb(255, 0, 212);
+}
+
+#btn1:active {
+  position: relative; /*相対位置（そうたい）を取得（しゅとく）。これでtop,leftが指定可能（していかのう）*/
+  top: 5px; 
+  left: 5px;
+  box-shadow: 0 5px 0 #3ed1c5;
+}
+/*******************************************************/
+/* id=btn99 backボタン */
+/*******************************************************/
+.back{
+  margin-top: 8px;
+  text-align: left;
+  }
+  #btn99{
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-size: 24px;
+  background: rgb(26, 212, 212);
+  cursor: pointer; /*カーソルをポインターの形(かたち)にする*/
+  }

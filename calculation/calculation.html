@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <meta name="description" content="Calculation">
+
+    <link rel="icon" href="hint.ico">
+    <link rel="stylesheet" href="css/calculation.css">
+  </head>
+
+  <body>
+    <header>
+      <div class = "back">
+        <button id="btn99" type="button" onclick="history.back()">back</button>
+      </div>
+  
+      <h1>Calculation</h1>
+    </header>
+
+    <main>
+      <body>
+        <form>
+          <div>
+            <input type="number" value="1" id="a">
+            <select id="calcType">
+              <option value="type-add">+</option>
+              <option value="type-substract">-</option>
+              <option value="type-multiply">×</option>
+              <option value="type-divide">÷</option>
+            </select>
+            <input type="number" value="2" id="b"> =
+            <span id="result"></span>
+          </div>
+        </form>
+      </body>
+
+    </main>
+    <script src="js/calculation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+/* ヘッダー */
+header {
+  margin-top: 8px;
+  color: rgb(236, 39, 39);
+  font-size: 38px;
+  text-align: center;
+  background-color: rgb(153, 153, 151);
+  animation:neonBlur 16s infinite;
+}
+header>span:nth-child(1){
+  opacity: .5;
+}
+header>span:nth-child(2){
+  animation: neonBlink 5s infinite;
+}
+header>span:nth-child(3){
+ opacity: 4; 
+}
+header>span:nth-child(4){
+  animation:neonBlink 2s infinite;
+}
+header>span:nth-child(5){
+  animation:neonBlink 4s infinite;
+}
+header>span:nth-child(6){
+  opacity: .4;
+}
+@keyframes neonBlink {
+  0% { opacity: 1; }
+  10% { opacity: .6; }
+  12% { opacity: 1; }
+  15% { opacity: .4; }
+  17% { opacity: 1; }
+  18% { opacity: .3; }
+  19% { opacity: 1; }
+  89% { opacity: 1; }
+  91% { opacity: .7; }
+  94% { opacity: 1; }
+  100% { opacity: 1;}
+} 
+@keyframes neonBlur {
+  0% { text-shadow: 0px 0px 25px rgb(255, 251, 0); }
+  50% { text-shadow: 0px 0px 75px rgb(255, 251, 0); filter: blur(0.5px) }
+  100% { text-shadow: 0px 0px 25px rgb(255, 251,0); }
+}
+/* フッター */
+footer {
+  position: relative;
+  height: 65px;
+  background-color: rgb(212, 212, 212);
+}
+.footer-text {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  overflow: hidden;
+  color: rgb(0, 151, 251);
+  font-size: 20px;
+  white-space: nowrap;
+  animation-name: footer-move;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes footer-move {
+  from {
+  left: 0px;
+  }
+  to {
+  left: -140px;
+  }
+}
+/* class="omikuji" */
+.omikuji {
+  margin-top: 8px;
+}
+
+/* id=btn1 おみくじボタン１ */
+#btn1{
+  margin: 20px auto;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  border-radius: 50%;
+  color: rgb(255, 0, 212);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  background: aqua;
+  box-shadow: 0 10px 0 #3ed1c5;
+  transition: 3s;
+}
+
+#btn1:hover {
+  color: aqua;
+  background: rgb(255, 0, 212);
+}
+
+#btn1:active {
+  position: relative; /*相対位置（そうたい）を取得（しゅとく）。これでtop,leftが指定可能（していかのう）*/
+  top: 5px; 
+  left: 5px;
+  box-shadow: 0 5px 0 #3ed1c5;
+}
+/*******************************************************/
+/* id=btn99 backボタン */
+/*******************************************************/
+.back{
+  margin-top: 8px;
+  text-align: left;
+  }
+  #btn99{
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-size: 24px;
+  background: rgb(26, 212, 212);
+  cursor: pointer; /*カーソルをポインターの形(かたち)にする*/
+  }
